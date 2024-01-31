@@ -3,7 +3,7 @@ package api
 import (
 	"github.com/gin-gonic/gin"
 
-	"user/api/handlers"
+	"crud-example-go/api/handlers"
 )
 
 func SetupRoutes(router *gin.Engine) {

@@ -27,7 +27,7 @@ func UpdateUserHandler(c *gin.Context) {
 		if gorm.IsRecordNotFoundError(err) {
 			c.JSON(http.StatusNotFound, gin.H{"error": "User not found"})
 		} else {
-			c.JSON(http.StatusInternalServerError, gin.H{"error", "Internal Server Error"})
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Internal Server Error"})
 		}
 		return
 	}

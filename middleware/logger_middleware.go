@@ -6,7 +6,7 @@ import (
 	"log"
 )
 
-func LoggerMiddleware() gin.HandleFunc {
+func LoggerMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		log.Println("Request received")
 		c.Next()

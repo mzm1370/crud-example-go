@@ -1,15 +1,14 @@
 package database
 
 import (
-	"crud-example-go/database/migrayions"
+	"crud-example-go/database/migrations"
 
 	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/splite"
 )
 
-var DB *gorm.db
+var DB *gorm.DB
 
-func init() {
+func Init() {
 	var err error
 	DB, err = gorm.Open("splite3", "store")
 
@@ -17,6 +16,6 @@ func init() {
 		panic("Failed to connect to data")
 	}
 
-	migrayions.MigrateUser(DB)
+	migrations.MigrateUser(DB)
 
 }
