@@ -1,5 +1,5 @@
 [database]
-    driver = "sqlite3"
+    driver = "mysql"
     connection_url = "127.0.0.1:3306"
 [server]
     host = "localhost"
